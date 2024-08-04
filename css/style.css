@@ -1,0 +1,47 @@
+@import url("reset.css");
+@import url("main-styles/notes-header.css");
+@import url("main-styles/notes-input.css");
+@import url("main-styles/notes-create.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+html {
+
+    height: 100vh;
+    background-color: #222222;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    justify-content: center;
+
+    /* width: 100%; */
+}
+
+.notes-place {
+    width: 100%;
+    margin: 20px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 100,
+    'wght' 600,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+
+/* 
+@media only screen and (max-width:599px){
+
+}
+
+@media only screen and (min-width:600px){
+
+}
+ */
+
