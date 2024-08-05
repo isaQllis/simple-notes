@@ -1,4 +1,4 @@
-.notes-create {
+.notes-btn {
     
     height: 40px;
     width: 40px;
@@ -11,15 +11,19 @@
     background-color: hsl(0, 0%, 55%);
 }
 
-.notes-create:hover {
+.notes-btn:hover {
     cursor: pointer;
     background-color: hsl(0, 0%, 65%);
 
 }
 
+.notes-btn-end {
+    justify-self: end;
+}
+
 @media only screen and (max-width:599px){
 
-    .notes-create {
+    .notes-btn {
     
         height: 50px;
         width: 50px;
@@ -32,7 +36,7 @@
         background-color: rgb(139, 139, 139);
     }
 
-    .notes-create:hover {
+    .notes-btn:hover {
         background-color: rgb(165, 165, 165);
     }
 
