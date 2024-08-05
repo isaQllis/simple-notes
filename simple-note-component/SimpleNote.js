@@ -2,7 +2,7 @@ const template = document.createElement("template");
 
 template.innerHTML = `
 <link rel="stylesheet" href="./css/reset.css">
-<link rel="stylesheet" href="./js/simple-note-component/note-component-styles.css">
+<link rel="stylesheet" href="./simple-note-component/note-component-styles.css">
 <link rel="stylesheet" href="./css/notes-colors.css">
 <section id="simple-note" class="note">
     <input

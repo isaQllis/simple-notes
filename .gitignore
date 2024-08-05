@@ -1,0 +1,9 @@
+.config
+vite.config.js
+.upm
+node_modules
+package-lock.json
+package.json
+.replit
+replit.nix
+.gitignore
