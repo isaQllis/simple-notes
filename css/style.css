@@ -2,19 +2,20 @@
 @import url("main-styles/notes-header.css");
 @import url("main-styles/notes-input.css");
 @import url("main-styles/notes-create.css");
+@import url("notes-colors.css");
 
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 html {
 
     height: 100vh;
-    background-color: #222222;
+    background-color: var(--notes-color-black);
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
+    
 
     justify-content: center;
 
@@ -22,8 +23,17 @@ html {
 }
 
 .notes-place {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(auto-fill, 230px);
+
+    justify-content: center;
+    gap: 25px;
     width: 100%;
-    margin: 20px;
+
+    margin-top: 30px;
+    margin-inline: 10px;
 }
 
 .material-symbols-outlined {

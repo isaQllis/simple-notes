@@ -6,20 +6,22 @@
     <title>Simple Notes</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script.js"></script>
+    <script defer src="js/script.js" type="module"></script>
+    <link rel="stylesheet" href="./js/simple-note-component/note-component-styles.css">
 </head>
 <body>
     <div class="container" id="App">
         <header class="notes-header">
             <input class="notes-input" placeholder="Pesquise pelas suas notas">
-            <button class="notes-create">
+            <button id="make-a-note" class="notes-create">
                 <span class="material-symbols-outlined">ink_pen</span>
             </button>
         </header>
         
-        <main class="notes-place">
-            
-        </main>
+        <div class="notes-place" id="notes-placer">
+
+                
+        </div>
     </div>    
 </body>
 </html>

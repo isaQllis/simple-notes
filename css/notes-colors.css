@@ -1,0 +1,48 @@
+
+:root {
+    --notes-color-black: hsl(0, 0%, 13%);
+    --notes-color-graphite: hsl(0, 0%, 17%);
+    --notes-color-gray:hsl(0, 0%, 55%);
+    --notes-color-silver:hsl(0, 0%, 65%);
+    --notes-color-white:hsl(0, 0%, 87%);
+    --notes-color-yellow: hsl(40, 65%, 54%);
+    --notes-color-pink: hsl(300, 65%, 64%);
+    --notes-color-green: hsl(80, 65%, 54%);
+    --notes-color-blue: hsl(200, 65%, 54%);
+}
+
+.notes-bg-black {
+    background-color: var(--notes-color-black);
+}
+
+.notes-bg-graphite {
+    background-color: var(--notes-color-graphite);
+}
+
+.notes-bg-gray {
+    background-color: var(--notes-color-gray);
+}
+
+.notes-bg-silver {
+    background-color: var(--notes-color-silver);
+}
+
+.notes-bg-white {
+    background-color: var(--notes-color-white);
+}
+
+.notes-bg-yellow {
+    background-color: var(--notes-color-yellow);
+}
+
+.notes-bg-pink {
+    background-color: var(--notes-color-pink);
+}
+
+.notes-bg-green {
+    background-color: var(--notes-color-green);
+}
+
+.notes-bg-blue {
+    background-color: var(--notes-color-blue);
+}

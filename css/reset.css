@@ -67,8 +67,17 @@ a {
     line-height: inherit;
     
   }
-  
+
 input {
   padding-inline: 0px;
-	padding-block: 0px;
+  padding-block: 0px;
+}
+
+textarea {
+	padding: 0px;
+	resize: none;
+}
+
+* {
+    box-sizing: border-box;
 }
