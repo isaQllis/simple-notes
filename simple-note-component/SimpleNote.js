@@ -1,20 +1,4 @@
-const template = document.createElement("template");
-
-template.innerHTML = `
-<link rel="stylesheet" href="./css/reset.css">
-<link rel="stylesheet" href="./simple-note-component/note-component-styles.css">
-<link rel="stylesheet" href="./css/notes-colors.css">
-<section id="simple-note" class="note">
-    <input
-        class="note-title"
-        type="text"
-        name="title"
-        placeholder="Título">
-
-    <textarea class="note-content" name="content" placeholder="Escreva sua nota aqui..."></textarea>
-
-</section>
-`
+import template from "./simple-note-template.js";
 
 class SimpleNote extends HTMLElement {
 
