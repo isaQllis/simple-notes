@@ -2,7 +2,6 @@ import template from "./simple-note-template.js";
 
 class SimpleNote extends HTMLElement {
 
-    #id;
     #name;
     #color;
     
@@ -53,10 +52,6 @@ class SimpleNote extends HTMLElement {
 
     }
 
-    set id(newValue) {
-        this.#id = newValue;
-    }
-
     set title(newValue) {
         this.#name = newValue;
     }
@@ -64,13 +59,14 @@ class SimpleNote extends HTMLElement {
     set color(newValue) {
         const validColors = ["pink", "blue", "yellow", "green"];
         
+        // Caso não seja especificado a cor, coloca uma aleatória
         if(!newValue || newValue == "" || validColors.includes(newValue)){
             newValue = validColors[Math.floor(Math.random() * validColors.length)];
         }
 
-        console.log(this.shadowRoot.firstElementChild.nextElementSibling);
         const classList = this.shadowRoot.getElementById("simple-note").classList;
 
+        // Caso já possua uma cor, a remove e coloca a nova
         if(classList.length > 1) {
             classList.remove(classList[classList.length - 1]);
             
@@ -78,10 +74,6 @@ class SimpleNote extends HTMLElement {
                 
         classList.add("notes-bg-" + newValue);
         
-    }
-
-    get id() {
-        this.#id;
     }
 
     get title() {
