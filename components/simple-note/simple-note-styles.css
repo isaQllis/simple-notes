@@ -36,6 +36,10 @@ textarea {
     background-color: inherit;
 }
 
+.note-title:focus {
+    outline: 0px;
+}
+
 .note-title::placeholder, .note-content::placeholder {
     color: inherit;
 } 
@@ -50,6 +54,10 @@ textarea {
     color: inherit;
     
     background-color: inherit;
+}
+
+.note-content:focus {
+    outline: 0px;
 }
 
 :root {

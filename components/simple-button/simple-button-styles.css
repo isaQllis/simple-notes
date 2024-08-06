@@ -7,21 +7,25 @@
 
     border: none;
     border-radius: 3px;
-
-    background-color: hsl(0, 0%, 55%);
 }
 
 .notes-btn:hover {
     cursor: pointer;
-    background-color: hsl(0, 0%, 65%);
-
 }
 
 .notes-btn-end {
     justify-self: end;
 }
 
+.notes-bg-light {
+    background-color: var(--notes-color-light);
+    transition: background-color 2s ease;
+}
 
+.notes-bg-silver {
+    background-color: var(--notes-color-silver);
+    transition: background-color 2s ease;
+}
 
 @media only screen and (max-width:599px){
 
@@ -35,11 +39,6 @@
         border: none;
         border-radius: 3px;
     
-        background-color: rgb(139, 139, 139);
-    }
-
-    .notes-btn:hover {
-        background-color: rgb(165, 165, 165);
     }
 
 }

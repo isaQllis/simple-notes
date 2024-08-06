@@ -5,6 +5,7 @@
     --notes-color-gray:hsl(0, 0%, 55%);
     --notes-color-silver:hsl(0, 0%, 65%);
     --notes-color-white:hsl(0, 0%, 87%);
+    --notes-color-light: hsl(0, 0%, 97%);
     --notes-color-yellow: hsl(40, 65%, 54%);
     --notes-color-pink: hsl(300, 65%, 64%);
     --notes-color-green: hsl(80, 65%, 54%);
@@ -13,6 +14,7 @@
 
 .notes-bg-black {
     background-color: var(--notes-color-black);
+    color: white;
 }
 
 .notes-bg-graphite {
@@ -31,6 +33,10 @@
     background-color: var(--notes-color-white);
 }
 
+.notes-bg-light {
+    background-color: var(--notes-color-light);
+}
+
 .notes-bg-yellow {
     background-color: var(--notes-color-yellow);
 }
@@ -45,4 +51,24 @@
 
 .notes-bg-blue {
     background-color: var(--notes-color-blue);
+}
+
+html.notes-bg-black {
+    background-color: var(--notes-color-black);
+    transition: background-color 2s ease;
+}
+
+html.notes-bg-white {
+    background-color: var(--notes-color-white);
+    transition: background-color 2s ease;
+}
+
+input.notes-bg-light {
+    background-color: var(--notes-color-light);
+    transition: background-color 2s ease;
+}
+
+input.notes-bg-graphite {
+    background-color: var(--notes-color-graphite);
+    transition: background-color 2s ease;
 }

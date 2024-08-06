@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="notes-bg-black">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +13,10 @@
     <div class="container" id="App">
         
         <header class="notes-header">
-            <input class="notes-input" placeholder="Pesquise pelas suas notas">
-            <button id="make-a-note" class="notes-btn">
-                <span class="material-symbols-outlined">ink_pen</span>
-            </button>
-            <button id="dark-mode" class="notes-btn notes-btn-end">
-                <span class="material-symbols-outlined">dark_mode</span>     
-            </button>
+            <input id="search-bar" class="notes-input notes-bg-graphite" placeholder="Pesquise pelas suas notas">
+            <simple-button id="make-a-note" icon="ink_pen"></simple-button>
+            <simple-button id="window-mode" icon="dark_mode"></simple-button>
+            
         </header>
         
         <div class="notes-place" id="notes-placer">

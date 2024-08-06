@@ -1,10 +1,26 @@
-import template from "./simple-note-template.js";
+const template = document.createElement("template");
+
+template.innerHTML = `
+    <link rel="stylesheet" href="/components/simple-note/simple-note-styles.css">
+
+    <!-- Animação para não aparecer html sem estilização -->
+    <style>
+        section { opacity: 0; animation: fadeIn 0.2s ease-in-out forwards;}
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.98); }
+            100% { opacity: 1; transform: scale(1); }}
+    </style>
+
+    <section id="simple-note" class="note">
+        <input class="note-title" type="text" name="title" placeholder="Título">
+        <textarea class="note-content" name="content" placeholder="Escreva sua nota aqui..."></textarea>
+    </section>`;
 
 class SimpleNote extends HTMLElement {
 
     #name;
     #color;
-    
+
     #text;
     #createdDate;
     #modifiedDate;
@@ -26,6 +42,7 @@ class SimpleNote extends HTMLElement {
         this.title = title;
         this.color = color;
 
+
     }
 
     static get observedAttributes() {
@@ -34,6 +51,10 @@ class SimpleNote extends HTMLElement {
 
     connectedCallback() {
         
+    }
+
+    disconnectedCallback() {
+
     }
 
     attributeChangedCallback (name, oldValue, newValue) {
@@ -48,9 +69,7 @@ class SimpleNote extends HTMLElement {
         }
     }
 
-    disconnectedCallback() {
-
-    }
+    
 
     set title(newValue) {
         this.#name = newValue;
@@ -71,8 +90,10 @@ class SimpleNote extends HTMLElement {
             classList.remove(classList[classList.length - 1]);
             
         } 
-                
-        classList.add("notes-bg-" + newValue);
+        
+        this.#color = newValue;
+        classList.add("notes-bg-" + this.#color);
+        
         
     }
 

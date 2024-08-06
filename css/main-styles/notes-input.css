@@ -10,8 +10,6 @@
     font-weight: 300;
     color: white;
     
-    background-color: hsl(0, 0%, 17%);
-    
 }
 
 .notes-input::placeholder {
@@ -22,6 +20,7 @@
     /* border: 1px solid #1f1f1f; */
     /* outline: 3px solid #444444; */
     padding-left: 15px;
+    outline: 0px;
 
 }
 
@@ -40,13 +39,12 @@
         margin-top: 30px;
     
         border: none;
+        outline: 0px;
         border-radius: 3px;
     
         font-size: large;
         font-weight: 300;
         color: white;
-        
-        background-color: #2b2b2b;
     }
     
     .notes-input::placeholder {
@@ -55,7 +53,7 @@
     }
     .notes-input:focus {
         /* border: 1px solid #1f1f1f; */
-        outline: 3px solid #444444;
+        outline: 0px;
         padding-left: 15px;
     
     }
