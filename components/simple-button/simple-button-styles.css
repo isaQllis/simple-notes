@@ -1,9 +1,11 @@
+button {
+    margin: 0px;
+    padding: 0px;
+}
 .notes-btn {
     
     height: 40px;
     width: 40px;
-
-    margin-left: 5px;
 
     border: none;
     border-radius: 3px;

@@ -7,7 +7,7 @@ template.innerHTML = `
     <style>
         section { opacity: 0; animation: fadeIn 0.2s ease-in-out forwards;}
         @keyframes fadeIn {
-            0% { opacity: 0; transform: scale(0.98); }
+            0% { opacity: 0; transform: scale(1.20); }
             100% { opacity: 1; transform: scale(1); }}
     </style>
 
@@ -52,7 +52,9 @@ class SimpleNote extends HTMLElement {
 
     connectedCallback() {
         console.log("Um componente <simple-note> foi conectado");
-        this.shadowRoot.getElementById("delete-button").addEventListener("click", () => this.remove());
+        this.shadowRoot.getElementById("delete-button").addEventListener("click", () => {
+            this.remove();
+        });
     }
 
     disconnectedCallback() {
