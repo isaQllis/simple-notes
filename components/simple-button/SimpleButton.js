@@ -12,16 +12,16 @@ template.innerHTML = `
             100% { opacity: 1; transform: scale(1); }}
     </style>
 
-    <button id="simple-button" class="notes-btn notes-bg-silver">
+    <button id="simple-button" class="notes-btn">
         <span id="button-icon" class="material-symbols-outlined"></span>
     </button>`;
 
 class SimpleButton extends HTMLElement {
     
     #icon;
-    #design;
+    #color;
 
-    constructor(icon, design) {
+    constructor(icon, color) {
 
         super();
 
@@ -30,11 +30,11 @@ class SimpleButton extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true));
 
         this.icon = icon;
-        this.design = design;
+        this.color = color;
     }
 
     static get observedAttributes() {
-        return ["icon"];
+        return ["icon", "color"];
     }
 
     connectedCallback() {
@@ -49,29 +49,44 @@ class SimpleButton extends HTMLElement {
         if(name === "icon") {
             this.icon = newValue;
         }
+
+        if(name === "color") {
+            this.color = newValue;
+        }
     }
 
     set icon(newValue) {
-        console.log(newValue);
-        const validIcons = ["ink_pen", "close", "dark_mode"];
+        const validIcons = ["ink_pen", "delete", "dark_mode"];
         if(!newValue || newValue === "" || !validIcons.includes(newValue)){
             newValue = "question_mark";   
         }
 
         this.#icon = newValue;
-        const icon = this.shadowRoot.getElementById("button-icon").innerHTML = this.icon;
+        this.shadowRoot.getElementById("button-icon").innerHTML = this.icon;
     }
 
-    set design(newValue) {
-        this.#design = newValue;
+    set color(newValue) {
+        const validColors = ["silver", "yellow", "green", "blue", "pink"];
+        if(!newValue || newValue === "" || !validColors.includes(newValue)){
+            newValue = "silver";   
+        }
+
+        this.#color = newValue;
+        
+        const btnClasses = this.shadowRoot.getElementById("simple-button").classList;
+
+        if(btnClasses.length > 0) 
+            btnClasses.remove(btnClasses[1]);
+
+        btnClasses.add("notes-bg-" + this.color);
     }
 
     get icon() {
         return this.#icon;
     }
 
-    get design() {
-        return this.#design;
+    get color() {
+        return this.#color;
     }
     
 }

@@ -4,8 +4,14 @@ import SimpleButton from "/components/simple-button/SimpleButton.js";
 customElements.define("simple-note", SimpleNote);
 customElements.define("simple-button", SimpleButton);
 
+var cont = -1;
+
 document.getElementById("make-a-note").addEventListener("click", () => {
-    const note = new SimpleNote();
+    if(cont > 2) cont = 0;
+    else cont++;
+
+    const colors = ["yellow", "green", "blue", "pink"];
+    const note = new SimpleNote("", colors[cont]);
     document.getElementById("notes-placer").appendChild(note);
 })
 
@@ -20,7 +26,7 @@ document.getElementById("window-mode").addEventListener("click", () => {
         document.getElementById("search-bar").classList.add("notes-bg-light");
 
         Array.from(document.getElementsByTagName("simple-button")).forEach( (btn) => {
-            console.log(btn.shadowRoot);
+
             btn.shadowRoot.getElementById("simple-button").classList.remove("notes-bg-silver");
             btn.shadowRoot.getElementById("simple-button").classList.add("notes-bg-light");
         });
@@ -33,7 +39,7 @@ document.getElementById("window-mode").addEventListener("click", () => {
         document.getElementById("search-bar").classList.add("notes-bg-graphite");
 
         Array.from(document.getElementsByTagName("simple-button")).forEach( (btn) => {
-            console.log(btn.shadowRoot);
+
             btn.shadowRoot.getElementById("simple-button").classList.remove("notes-bg-light");
             btn.shadowRoot.getElementById("simple-button").classList.add("notes-bg-silver");
         });

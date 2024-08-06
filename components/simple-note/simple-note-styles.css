@@ -23,7 +23,7 @@ textarea {
 }
 
 .note-title {
-    width: 100%;
+    width: 250px;
     height: 50px;
     font-size: large;
     font-weight: 300;

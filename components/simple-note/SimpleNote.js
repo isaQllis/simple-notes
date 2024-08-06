@@ -13,6 +13,7 @@ template.innerHTML = `
 
     <section id="simple-note" class="note">
         <input class="note-title" type="text" name="title" placeholder="Título">
+        <simple-button id="delete-button" icon="delete" color=""></simple-button>
         <textarea class="note-content" name="content" placeholder="Escreva sua nota aqui..."></textarea>
     </section>`;
 
@@ -50,11 +51,12 @@ class SimpleNote extends HTMLElement {
     }
 
     connectedCallback() {
-        
+        console.log("Um componente <simple-note> foi conectado");
+        this.shadowRoot.getElementById("delete-button").addEventListener("click", () => this.remove());
     }
 
     disconnectedCallback() {
-
+        console.log("Um componente <simple-note> foi desconectado");
     }
 
     attributeChangedCallback (name, oldValue, newValue) {
@@ -79,7 +81,7 @@ class SimpleNote extends HTMLElement {
         const validColors = ["pink", "blue", "yellow", "green"];
         
         // Caso não seja especificado a cor, coloca uma aleatória
-        if(!newValue || newValue == "" || validColors.includes(newValue)){
+        if(!newValue || newValue == "" || !validColors.includes(newValue)){
             newValue = validColors[Math.floor(Math.random() * validColors.length)];
         }
 
@@ -93,7 +95,7 @@ class SimpleNote extends HTMLElement {
         
         this.#color = newValue;
         classList.add("notes-bg-" + this.#color);
-        
+        this.shadowRoot.getElementById("delete-button").setAttribute("color", this.#color);
         
     }
 
