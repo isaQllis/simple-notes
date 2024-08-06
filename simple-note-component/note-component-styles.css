@@ -1,3 +1,16 @@
+input {
+    padding-inline: 0px;
+    padding-block: 0px;
+  }
+  
+textarea {
+    padding: 0px;
+    resize: none;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 .note {
     width: 100%;
@@ -37,4 +50,32 @@
     color: inherit;
     
     background-color: inherit;
+}
+
+:root {
+    --notes-color-gray:hsl(0, 0%, 55%);
+    --notes-color-yellow: hsl(40, 65%, 54%);
+    --notes-color-pink: hsl(300, 65%, 64%);
+    --notes-color-green: hsl(80, 65%, 54%);
+    --notes-color-blue: hsl(200, 65%, 54%);
+}
+
+.notes-bg-gray {
+    background-color: var(--notes-color-gray);
+}
+
+.notes-bg-yellow {
+    background-color: var(--notes-color-yellow);
+}
+
+.notes-bg-pink {
+    background-color: var(--notes-color-pink);
+}
+
+.notes-bg-green {
+    background-color: var(--notes-color-green);
+}
+
+.notes-bg-blue {
+    background-color: var(--notes-color-blue);
 }
