@@ -1,66 +1,66 @@
 
 :root {
-    --notes-color-black: rgb(33, 33, 33);
-    --notes-color-graphite: rgb(43, 43, 43);
-    --notes-color-gray:rgb(140, 140, 140);
-    --notes-color-silver:rgb(166, 166, 166);
-    --notes-color-white:rgb(222, 222, 222);
-    --notes-color-light: rgb(247, 247, 247);
-    --notes-color-yellow: rgb(214, 163, 61);
-    --notes-color-pink: rgb(223, 104, 223);
-    --notes-color-green: rgb(163, 214, 61);
-    --notes-color-blue: rgb(61, 163, 214);
+    --simple-color-black: rgb(33, 33, 33);
+    --simple-color-graphite: rgb(43, 43, 43);
+    --simple-color-gray:rgb(140, 140, 140);
+    --simple-color-silver:rgb(166, 166, 166);
+    --simple-color-white:rgb(222, 222, 222);
+    --simple-color-light: rgb(247, 247, 247);
+    --simple-color-yellow: rgb(214, 163, 61);
+    --simple-color-pink: rgb(223, 104, 223);
+    --simple-color-green: rgb(163, 214, 61);
+    --simple-color-blue: rgb(61, 163, 214);
 }
 
 .simple-bg-black {
-    background-color: var(--notes-color-black);
+    background-color: var(--simple-color-black);
     color: white;
 }
 
 .simple-bg-graphite {
-    background-color: var(--notes-color-graphite);
+    background-color: var(--simple-color-graphite);
     color:white;
 }
 
 .simple-bg-gray {
-    background-color: var(--notes-color-gray);
+    background-color: var(--simple-color-gray);
     color: white;
 }
 
 .simple-bg-silver {
-    background-color: var(--notes-color-silver);
+    background-color: var(--simple-color-silver);
     color: black;
 }
 
 .simple-bg-white {
-    background-color: var(--notes-color-white);
+    background-color: var(--simple-color-white);
     color: black;
 }
 
 .simple-bg-light {
-    background-color: var(--notes-color-light);
+    background-color: var(--simple-color-light);
     color: black;
 }
 
 /* Transições do DARK/LIGHT MODE */
 html.simple-bg-black {
-    background-color: var(--notes-color-black);
+    background-color: var(--simple-color-black);
     transition: background-color 2s ease;
 }
 
 html.simple-bg-white {
-    background-color: var(--notes-color-white);
+    background-color: var(--simple-color-white);
     transition: background-color 2s ease;
 }
 
 input.simple-bg-light {
-    background-color: var(--notes-color-light);
+    background-color: var(--simple-color-light);
     transition: background-color 2s ease;
     color:black;
 }
 
 input.simple-bg-graphite {
-    background-color: var(--notes-color-graphite);
+    background-color: var(--simple-color-graphite);
     transition: background-color 2s ease;
     color:white;
 }

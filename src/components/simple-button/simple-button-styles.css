@@ -17,33 +17,33 @@ button {
 }
 
 .simple-bg-light {
-    background-color: var(--notes-color-light);
+    background-color: var(--simple-color-light);
     transition: background-color 2s ease;
 }
 
 .simple-bg-silver {
-    background-color: var(--notes-color-silver);
+    background-color: var(--simple-color-silver);
     transition: background-color 2s ease;
 }
 
 .simple-bg-gray {
-    background-color: var(--notes-color-gray);
+    background-color: var(--simple-color-gray);
 }
 
 .simple-bg-yellow {
-    background-color: var(--notes-color-yellow);
+    background-color: var(--simple-color-yellow);
 }
 
 .simple-bg-pink {
-    background-color: var(--notes-color-pink);
+    background-color: var(--simple-color-pink);
 }
 
 .simple-bg-green {
-    background-color: var(--notes-color-green);
+    background-color: var(--simple-color-green);
 }
 
 .simple-bg-blue {
-    background-color: var(--notes-color-blue);
+    background-color: var(--simple-color-blue);
 }
 
 @media only screen and (max-width:662px) {

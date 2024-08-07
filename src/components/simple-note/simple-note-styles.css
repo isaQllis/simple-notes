@@ -61,7 +61,7 @@ textarea {
 }
 
 .note-title::placeholder, .note-content::placeholder {
-    color: var(--notes-color-graphite);
+    color: var(--simple-color-graphite);
     opacity: 0.5;
 } 
 
@@ -71,23 +71,23 @@ textarea {
 
 /* Notes colors */
 .simple-bg-yellow {
-    background-color: var(--notes-color-yellow);
-    color: var(--notes-color-graphite);
+    background-color: var(--simple-color-yellow);
+    color: var(--simple-color-graphite);
 }
 
 .simple-bg-pink {
-    background-color: var(--notes-color-pink);
-    color: var(--notes-color-graphite);
+    background-color: var(--simple-color-pink);
+    color: var(--simple-color-graphite);
 }
 
 .simple-bg-green {
-    background-color: var(--notes-color-green);
-    color: var(--notes-color-graphite);
+    background-color: var(--simple-color-green);
+    color: var(--simple-color-graphite);
 }
 
 .simple-bg-blue {
-    background-color: var(--notes-color-blue);
-    color: var(--notes-color-graphite);
+    background-color: var(--simple-color-blue);
+    color: var(--simple-color-graphite);
 }
 
 /* Screen sizes */
