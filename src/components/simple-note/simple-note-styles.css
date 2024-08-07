@@ -70,22 +70,22 @@ textarea {
 }
 
 /* Notes colors */
-.notes-bg-yellow {
+.simple-bg-yellow {
     background-color: var(--notes-color-yellow);
     color: var(--notes-color-graphite);
 }
 
-.notes-bg-pink {
+.simple-bg-pink {
     background-color: var(--notes-color-pink);
     color: var(--notes-color-graphite);
 }
 
-.notes-bg-green {
+.simple-bg-green {
     background-color: var(--notes-color-green);
     color: var(--notes-color-graphite);
 }
 
-.notes-bg-blue {
+.simple-bg-blue {
     background-color: var(--notes-color-blue);
     color: var(--notes-color-graphite);
 }

@@ -88,11 +88,11 @@ class SimpleButton extends HTMLElement {
         // Remove cor atual
         validColors.forEach((colors) => {
             if(btnClasses.toString().includes(colors))
-                btnClasses.remove("notes-bg-" + colors);
+                btnClasses.remove("simple-bg-" + colors);
         });
 
         // Insere nova cor
-        btnClasses.add("notes-bg-" + this.color);
+        btnClasses.add("simple-bg-" + this.color);
     }
     
     get icon() {

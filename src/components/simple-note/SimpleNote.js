@@ -98,11 +98,11 @@ class SimpleNote extends HTMLElement {
         // Remove cor atual
         validColors.forEach((colors) => {
             if(noteClasses.toString().includes(colors))
-                noteClasses.remove("notes-bg-" + colors);
+                noteClasses.remove("simple-bg-" + colors);
         });
 
         // Insere nova cor
-        noteClasses.add("notes-bg-" + this.color);
+        noteClasses.add("simple-bg-" + this.color);
 
         // Muda cor do botão de exclusão
         this.shadowRoot.getElementById("delete-button").setAttribute("color", this.color);

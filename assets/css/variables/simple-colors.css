@@ -12,54 +12,54 @@
     --notes-color-blue: rgb(61, 163, 214);
 }
 
-.notes-bg-black {
+.simple-bg-black {
     background-color: var(--notes-color-black);
     color: white;
 }
 
-.notes-bg-graphite {
+.simple-bg-graphite {
     background-color: var(--notes-color-graphite);
     color:white;
 }
 
-.notes-bg-gray {
+.simple-bg-gray {
     background-color: var(--notes-color-gray);
     color: white;
 }
 
-.notes-bg-silver {
+.simple-bg-silver {
     background-color: var(--notes-color-silver);
     color: black;
 }
 
-.notes-bg-white {
+.simple-bg-white {
     background-color: var(--notes-color-white);
     color: black;
 }
 
-.notes-bg-light {
+.simple-bg-light {
     background-color: var(--notes-color-light);
     color: black;
 }
 
 /* Transições do DARK/LIGHT MODE */
-html.notes-bg-black {
+html.simple-bg-black {
     background-color: var(--notes-color-black);
     transition: background-color 2s ease;
 }
 
-html.notes-bg-white {
+html.simple-bg-white {
     background-color: var(--notes-color-white);
     transition: background-color 2s ease;
 }
 
-input.notes-bg-light {
+input.simple-bg-light {
     background-color: var(--notes-color-light);
     transition: background-color 2s ease;
     color:black;
 }
 
-input.notes-bg-graphite {
+input.simple-bg-graphite {
     background-color: var(--notes-color-graphite);
     transition: background-color 2s ease;
     color:white;

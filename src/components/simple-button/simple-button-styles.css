@@ -16,33 +16,33 @@ button {
     cursor: pointer;
 }
 
-.notes-bg-light {
+.simple-bg-light {
     background-color: var(--notes-color-light);
     transition: background-color 2s ease;
 }
 
-.notes-bg-silver {
+.simple-bg-silver {
     background-color: var(--notes-color-silver);
     transition: background-color 2s ease;
 }
 
-.notes-bg-gray {
+.simple-bg-gray {
     background-color: var(--notes-color-gray);
 }
 
-.notes-bg-yellow {
+.simple-bg-yellow {
     background-color: var(--notes-color-yellow);
 }
 
-.notes-bg-pink {
+.simple-bg-pink {
     background-color: var(--notes-color-pink);
 }
 
-.notes-bg-green {
+.simple-bg-green {
     background-color: var(--notes-color-green);
 }
 
-.notes-bg-blue {
+.simple-bg-blue {
     background-color: var(--notes-color-blue);
 }
 
