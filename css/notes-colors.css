@@ -19,6 +19,7 @@
 
 .notes-bg-graphite {
     background-color: var(--notes-color-graphite);
+    color:white;
 }
 
 .notes-bg-gray {
@@ -35,6 +36,7 @@
 
 .notes-bg-light {
     background-color: var(--notes-color-light);
+    color: black;
 }
 
 .notes-bg-yellow {
@@ -66,9 +68,11 @@ html.notes-bg-white {
 input.notes-bg-light {
     background-color: var(--notes-color-light);
     transition: background-color 2s ease;
+    color:black;
 }
 
 input.notes-bg-graphite {
     background-color: var(--notes-color-graphite);
     transition: background-color 2s ease;
+    color:white;
 }
