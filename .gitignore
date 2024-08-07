@@ -6,5 +6,4 @@ package-lock.json
 package.json
 .replit
 replit.nix
-commit-pattern.md
-.gitignore
+tasks.md

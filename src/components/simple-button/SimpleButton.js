@@ -4,7 +4,7 @@ template.innerHTML = `
     <link rel="stylesheet" href="/src/components/simple-button/simple-button-styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
-    <!-- Animação para não aparecer html sem estilização -->
+    <!-- Animação para não aparecer os elementos antes de carregar as estilizações do css -->
     <style>
         section { opacity: 0; animation: fadeIn 0.2s ease-in-out forwards;}
         @keyframes fadeIn {

@@ -3,7 +3,7 @@ const template = document.createElement("template");
 template.innerHTML = `
     <link rel="stylesheet" href="/src/components/simple-note/simple-note-styles.css">
 
-    <!-- Animação para não aparecer html sem estilização -->
+    <!-- Animação para não aparecer os elementos antes de carregar as estilizações do css -->
     <style>
         section { opacity: 0; animation: fadeIn 0.2s ease-in-out forwards;}
         @keyframes fadeIn {

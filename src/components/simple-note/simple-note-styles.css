@@ -1,3 +1,6 @@
+
+/* Resets for notes */
+
 input {
     padding-inline: 0px;
     padding-block: 0px;
@@ -14,104 +17,111 @@ textarea {
     padding: 0px;
 }
 
-.note {
-    width: 100%;
-    height: 230px;
-    
-    color: black;
+/* Global stylization */
 
+.note {
     border: none;
-    border-radius: 3px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .note-title {
-    width: 250px;
-    height: 50px;
-    font-size: large;
-    font-weight: 300;
+    font-size: larger;
+    font-weight: 600;
 
     border: none;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+
     padding: 4%;
 
     color: inherit;
     background-color: inherit;
 }
 
+.note-content {
+    font-size: large;
+    font-weight: 300;
+
+    border: none;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    padding: 4%;
+
+    color: inherit;
+    background-color: inherit;
+}
+
+/* Pseudo classes and attributes stylization */
 .note-title:focus {
     outline: 0px;
 }
 
 .note-title::placeholder, .note-content::placeholder {
-    color: inherit;
+    color: var(--notes-color-graphite);
+    opacity: 0.5;
 } 
-
-.note-content {
-    width: 100%; 
-    height: 180px;
-    
-    border: none;
-    padding: 4%;
-
-    color: inherit;
-    background-color: inherit;
-}
 
 .note-content:focus {
     outline: 0px;
 }
 
-@media only screen and (max-width:662px){
-
-    .note {
-        width: 100%;
-        height: 276px;
-        
-        color: black;
-    
-        border: none;
-        border-radius: 3px;
-    }
-
-    .note-title {
-        width: 300px;
-        height: 50px;
-        font-size: larger;
-        font-weight: 300;
-    
-        border: none;
-        padding: 4%;
-    
-        color: inherit;
-        background-color: inherit;
-    }
-
-    .note-content {
-        width: 100%; 
-        height: 180px;
-        
-        border: none;
-        padding: 4%;
-        font-size: large;
-        color: inherit;
-        background-color: inherit;
-    }
-    
-
-}
-
+/* Notes colors */
 .notes-bg-yellow {
     background-color: var(--notes-color-yellow);
+    color: var(--notes-color-graphite);
 }
 
 .notes-bg-pink {
     background-color: var(--notes-color-pink);
+    color: var(--notes-color-graphite);
 }
 
 .notes-bg-green {
     background-color: var(--notes-color-green);
+    color: var(--notes-color-graphite);
 }
 
 .notes-bg-blue {
     background-color: var(--notes-color-blue);
+    color: var(--notes-color-graphite);
 }
 
+/* Screen sizes */
+@media only screen and (min-width:663px) {
+    .note {
+        width: 100%;
+        height: 230px;
+    }
+
+    .note-title {
+        width: 250px;
+        height: 20%;
+    }
+
+    .note-content {
+        width: 100%; 
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width:662px) {
+
+    .note {
+        width: 100%;
+        height: 276px;
+    }
+
+    .note-title {
+        width: 300px;
+        height: 20%;
+    }
+
+    .note-content {
+        width: 100%; 
+        height: 80%;
+    }
+}
