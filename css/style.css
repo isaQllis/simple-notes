@@ -6,7 +6,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
-html {
+:root {
     
     height: 100vh;
 
@@ -50,8 +50,8 @@ html {
     .notes-place {
         display: grid;
         
-        grid-template-columns: repeat(auto-fill, 390px);
-        grid-template-rows: repeat(auto-fill, 300px);
+        grid-template-columns: repeat(auto-fill, 360px);
+        grid-template-rows: repeat(auto-fill, 276px);
     
         justify-content: center;
         gap: 25px;

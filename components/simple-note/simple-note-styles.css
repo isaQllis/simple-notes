@@ -64,7 +64,7 @@ textarea {
 
     .note {
         width: 100%;
-        height: 300px;
+        height: 276px;
         
         color: black;
     
@@ -73,7 +73,7 @@ textarea {
     }
 
     .note-title {
-        width: 330px;
+        width: 300px;
         height: 50px;
         font-size: larger;
         font-weight: 300;
