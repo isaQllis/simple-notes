@@ -1,21 +1,23 @@
+
+/* Resets for buttons */
 button {
     margin: 0px;
     padding: 0px;
 }
-.notes-btn {
-    margin-left: 5px;
 
+/* Global stylization */
+.simple-btn {
     border: none;
     border-radius: 3px;
-
-    height: 40px;
-    width: 40px;
 }
 
-.notes-btn:hover {
+/* Pseudo classes and attributes stylization */
+.simple-btn:hover {
     cursor: pointer;
+
 }
 
+/* Notes colors */
 .simple-bg-light {
     background-color: var(--simple-color-light);
     transition: background-color 2s ease;
@@ -46,14 +48,19 @@ button {
     background-color: var(--simple-color-blue);
 }
 
-@media only screen and (max-width:662px) {
-    .notes-btn {
-        margin-left: 5px;
+/* Screen sizes */
+@media only screen and (min-width:663px) {
+    .simple-btn {
+        margin-left: 5px;  
+        height: 40px;
+        width: 40px;
+    }
+}
 
+@media only screen and (max-width:662px) {
+    .simple-btn {
+        margin-left: 5px;
         height: 50px;
         width: 50px;
-    
-        border: none;
-        border-radius: 3px;
     }
 }

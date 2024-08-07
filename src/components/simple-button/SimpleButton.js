@@ -12,7 +12,7 @@ template.innerHTML = `
             100% { opacity: 1; transform: scale(1); }}
     </style>
 
-    <button id="simple-button" class="notes-btn">
+    <button id="simple-button" class="simple-btn">
         <span id="button-icon" class="material-symbols-outlined"></span>
     </button>`;
 

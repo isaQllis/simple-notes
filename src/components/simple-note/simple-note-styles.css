@@ -1,6 +1,5 @@
 
 /* Resets for notes */
-
 input {
     padding-inline: 0px;
     padding-block: 0px;
@@ -18,8 +17,8 @@ textarea {
 }
 
 /* Global stylization */
-
 .note {
+    
     border: none;
 
     border-top-left-radius: 5px;
