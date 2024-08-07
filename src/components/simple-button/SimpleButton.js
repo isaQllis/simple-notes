@@ -6,7 +6,7 @@ template.innerHTML = `
 
     <!-- Animação para não aparecer os elementos antes de carregar as estilizações do css -->
     <style>
-        section { opacity: 0; animation: fadeIn 0.2s ease-in-out forwards;}
+        section { opacity: 0; animation: fadeIn 0.8s ease-in-out forwards;}
         @keyframes fadeIn {
             0% { opacity: 0; transform: scale(0.98); }
             100% { opacity: 1; transform: scale(1); }}
@@ -79,7 +79,10 @@ class SimpleButton extends HTMLElement {
         }
 
         this.#color = newValue;
-        
+        this.#buildColorUnderShadow(validColors);
+    }
+
+    #buildColorUnderShadow(validColors) {
         const btnClasses = this.shadowRoot.getElementById("simple-button").classList;
         
         // Remove cor atual
@@ -88,7 +91,7 @@ class SimpleButton extends HTMLElement {
                 btnClasses.remove("notes-bg-" + colors);
         });
 
-        // Insere nova
+        // Insere nova cor
         btnClasses.add("notes-bg-" + this.color);
     }
     

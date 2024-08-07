@@ -5,7 +5,7 @@ template.innerHTML = `
 
     <!-- Animação para não aparecer os elementos antes de carregar as estilizações do css -->
     <style>
-        section { opacity: 0; animation: fadeIn 0.2s ease-in-out forwards;}
+        section { opacity: 0; animation: fadeIn 0.8s ease-in-out forwards;}
         @keyframes fadeIn {
             0% { opacity: 0; transform: scale(1.20); }
             100% { opacity: 1; transform: scale(1); }}
@@ -73,8 +73,6 @@ class SimpleNote extends HTMLElement {
         }
     }
 
-    
-
     set title(newValue) {
         this.#name = newValue;
     }
@@ -87,26 +85,35 @@ class SimpleNote extends HTMLElement {
             newValue = validColors[Math.floor(Math.random() * validColors.length)];
         }
 
-        const classList = this.shadowRoot.getElementById("simple-note").classList;
-
-        // Caso já possua uma cor, a remove e coloca a nova
-        if(classList.length > 1) {
-            classList.remove(classList[classList.length - 1]);
-            
-        } 
+        
         
         this.#color = newValue;
-        classList.add("notes-bg-" + this.#color);
-        this.shadowRoot.getElementById("delete-button").setAttribute("color", this.#color);
+        this.#buildColorUnderShadow(validColors);
         
+    }
+
+    #buildColorUnderShadow(validColors) {
+        const noteClasses = this.shadowRoot.getElementById("simple-note").classList;
+
+        // Remove cor atual
+        validColors.forEach((colors) => {
+            if(noteClasses.toString().includes(colors))
+                noteClasses.remove("notes-bg-" + colors);
+        });
+
+        // Insere nova cor
+        noteClasses.add("notes-bg-" + this.color);
+
+        // Muda cor do botão de exclusão
+        this.shadowRoot.getElementById("delete-button").setAttribute("color", this.color);
     }
 
     get title() {
-        this.#name;
+        return this.#name;
     }
 
     get color() {
-        this.#color;
+        return this.#color;
     }
     
 }
