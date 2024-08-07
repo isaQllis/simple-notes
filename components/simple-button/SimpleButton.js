@@ -20,7 +20,14 @@ class SimpleButton extends HTMLElement {
     
     #icon;
     #color;
+    #size;
 
+    /**
+     * 
+     * @param {string} icon 
+     * @param {string} color 
+     * @param {string} size 
+     */
     constructor(icon, color) {
 
         super();
@@ -74,13 +81,17 @@ class SimpleButton extends HTMLElement {
         this.#color = newValue;
         
         const btnClasses = this.shadowRoot.getElementById("simple-button").classList;
+        
+        // Remove cor atual
+        validColors.forEach((colors) => {
+            if(btnClasses.toString().includes(colors))
+                btnClasses.remove("notes-bg-" + colors);
+        });
 
-        if(btnClasses.length > 0) 
-            btnClasses.remove(btnClasses[1]);
-
+        // Insere nova
         btnClasses.add("notes-bg-" + this.color);
     }
-
+    
     get icon() {
         return this.#icon;
     }
