@@ -1,8 +1,6 @@
+
+/* Global stylization */
 .notes-input {
-
-    width: 50%;
-    height: 40px;
-
     border: none;
     border-radius: 3px;
 
@@ -12,13 +10,12 @@
     
 }
 
+/* Pseudo classes and attributes stylization */
 .notes-input::placeholder {
     text-align: center;
     
 }
 .notes-input:focus {
-    /* border: 1px solid #1f1f1f; */
-    /* outline: 3px solid #444444; */
     padding-left: 15px;
     outline: 0px;
 
@@ -29,38 +26,21 @@
 
 }
 
+/* Screen sizes */
+@media only screen and (min-width:663px) {
 
-@media only screen and (max-width:662px){
     .notes-input {
+        width: 50%;
+        height: 40px;
+    }
+}
 
+@media only screen and (max-width:662px) {
+    
+    .notes-input {
         width: 70%;
         height: 50px;
-    
         margin-top: 30px;
-    
-        border: none;
-        outline: 0px;
-        border-radius: 3px;
-    
-        font-size: large;
-        font-weight: 300;
-        color: white;
-    }
-    
-    .notes-input::placeholder {
-        text-align: center;
-        
-    }
-    .notes-input:focus {
-        /* border: 1px solid #1f1f1f; */
-        outline: 0px;
-        padding-left: 15px;
-    
-    }
-    
-    .notes-input:focus::placeholder {
-        color: transparent;
-    
     }
 }
 
