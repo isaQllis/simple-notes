@@ -12,6 +12,11 @@ button {
 }
 
 /* Notes colors */
+.simple-bg-delete {
+    background-color: var(--simple-color-delete);
+    transition: background-color 1s ease;
+}
+
 .simple-bg-light {
     background-color: var(--simple-color-light);
     transition: background-color 1s ease;

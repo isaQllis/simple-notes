@@ -1,5 +1,3 @@
-import SimpleColorizedElement from "/src/classes/SimpleColorizedElement.js";
-
 const template = document.createElement("template");
 
 template.innerHTML = `
@@ -19,7 +17,7 @@ template.innerHTML = `
         <textarea class="note-content" name="content" placeholder="Escreva sua nota aqui..."></textarea>
     </section>`;
 
-class SimpleNote extends SimpleColorizedElement {
+class SimpleNote extends HTMLElement {
 
     #name;
     #color;
@@ -54,7 +52,6 @@ class SimpleNote extends SimpleColorizedElement {
         console.log("Um componente <simple-note> foi conectado");
 
         this.shadowRoot.getElementById("delete-button").addEventListener("click", () => {
-
             this.shadowRoot.getElementById("simple-note").classList.add("note-disappear");
 
             setInterval(() => {
@@ -83,18 +80,30 @@ class SimpleNote extends SimpleColorizedElement {
     }
 
     set color(newValue) {
+        const validColors = ["pink", "blue", "yellow", "green"];
         
         // Caso não seja especificado a cor, coloca uma aleatória
-        if(!this.validColors.includes(newValue)){
-            newValue = super.validColors[Math.floor(Math.random() * super.validColors.length)];
+        if(!newValue || newValue == "" || !validColors.includes(newValue)){
+            newValue = validColors[Math.floor(Math.random() * validColors.length)];
         }
         
         this.#color = newValue;
-
-        // Chama método da classe herdada para adicionar cor ao elemento
-        const noteClasses = this.shadowRoot.getElementById("simple-note").classList;
-        super.buildColorUnderShadow(noteClasses);
+        this.#buildColorUnderShadow(validColors);
         
+    }
+
+    #buildColorUnderShadow(validColors) {
+        const noteClasses = this.shadowRoot.getElementById("simple-note").classList;
+
+        // Remove cor atual
+        validColors.forEach((colors) => {
+            if(noteClasses.toString().includes(colors))
+                noteClasses.remove("simple-bg-" + colors);
+        });
+
+        // Insere nova cor
+        noteClasses.add("simple-bg-" + this.color);
+
         // Muda cor do botão de exclusão
         this.shadowRoot.getElementById("delete-button").setAttribute("color", this.color);
     }

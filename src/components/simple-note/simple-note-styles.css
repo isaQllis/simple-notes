@@ -76,7 +76,7 @@ textarea {
     100% {
         opacity: 0;
         transform: scale(0.8);
-        background-color: rgb(182, 44, 44);
+        background-color: var(--simple-color-delete);
     }
 }
 

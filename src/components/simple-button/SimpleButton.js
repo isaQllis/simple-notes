@@ -1,5 +1,3 @@
-import SimpleColorizedElement from "/src/classes/SimpleColorizedElement.js";
-
 const template = document.createElement("template");
 
 template.innerHTML = `
@@ -13,7 +11,7 @@ template.innerHTML = `
         <span id="button-icon" class="material-symbols-outlined"></span>
     </button>`;
 
-class SimpleButton extends SimpleColorizedElement {
+class SimpleButton extends HTMLElement {
     
     #icon;
     #color;
@@ -42,7 +40,7 @@ class SimpleButton extends SimpleColorizedElement {
     }
 
     connectedCallback() {
-        
+
     }
 
     disconnectedCallback() {
@@ -70,16 +68,26 @@ class SimpleButton extends SimpleColorizedElement {
     }
 
     set color(newValue) {
-
-        if(!newValue || newValue === "" || !this.validColors.includes(newValue)){
+        const validColors = ["silver", "yellow", "green", "blue", "pink"];
+        if(!newValue || newValue === "" || !validColors.includes(newValue)){
             newValue = "silver";   
         }
 
         this.#color = newValue;
+        this.#buildColorUnderShadow(validColors);
+    }
 
-        // Chama método da classe herdada para adicionar cor ao elemento
+    #buildColorUnderShadow(validColors) {
         const btnClasses = this.shadowRoot.getElementById("simple-button").classList;
-        super.buildColorUnderShadow(btnClasses);
+        
+        // Remove cor atual
+        validColors.forEach((colors) => {
+            if(btnClasses.toString().includes(colors))
+                btnClasses.remove("simple-bg-" + colors);
+        });
+
+        // Insere nova cor
+        btnClasses.add("simple-bg-" + this.color);
     }
     
     get icon() {
