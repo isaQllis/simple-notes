@@ -11,14 +11,6 @@ button {
     border-radius: 3px;
 }
 
-/* Pseudo classes and attributes stylization */
-.simple-btn:hover {
-    cursor: pointer;
-    background-color: var(--simple-color-white-transparent);
-    transition: background-color 0.5s ease;
-}
-
-
 /* Notes colors */
 .simple-bg-light {
     background-color: var(--simple-color-light);
@@ -52,10 +44,17 @@ button {
 
 /* Screen sizes */
 @media only screen and (min-width:663px) {
+
     .simple-btn {
         margin-left: 5px;  
         height: 40px;
         width: 40px;
+    }
+
+    .simple-btn:hover {
+        cursor: pointer;
+        background-color: var(--simple-color-white-transparent);
+        transition: background-color 0.5s ease;
     }
 }
 
