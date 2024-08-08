@@ -68,6 +68,23 @@ textarea {
     outline: 0px;
 }
 
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+        background-color: rgb(182, 44, 44);
+    }
+}
+
+.note-disappear {
+    
+    animation: fadeOut 0.3s ease-out;
+}
+
 /* Notes colors */
 .simple-bg-yellow {
     background-color: var(--simple-color-yellow);

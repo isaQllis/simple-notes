@@ -44,7 +44,6 @@ class SimpleNote extends SimpleColorizedElement {
 
         this.title = title;
         this.color = color;
-
     }
 
     static get observedAttributes() {
@@ -55,7 +54,15 @@ class SimpleNote extends SimpleColorizedElement {
         console.log("Um componente <simple-note> foi conectado");
 
         this.shadowRoot.getElementById("delete-button").addEventListener("click", () => {
-            this.remove();
+
+            this.shadowRoot.getElementById("simple-note").classList.add("note-disappear");
+
+            setInterval(() => {
+                
+                this.remove();
+            }, 300);
+            
+            
         });
     }
 
@@ -64,15 +71,11 @@ class SimpleNote extends SimpleColorizedElement {
     }
 
     attributeChangedCallback (name, oldValue, newValue) {
-
-        if(name === "title") {
+        if(name === "title")
             this.title = newValue;
-        }
-
-        if(name === "color") {
-
+        
+        if(name === "color")
             this.color = newValue; 
-        }
     }
 
     set title(newValue) {
