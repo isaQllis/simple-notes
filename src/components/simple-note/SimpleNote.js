@@ -52,6 +52,7 @@ class SimpleNote extends HTMLElement {
         console.log("Um componente <simple-note> foi conectado");
 
         this.shadowRoot.getElementById("delete-button").addEventListener("click", () => {
+            this.shadowRoot.getElementById("delete-button").shadowRoot.querySelector("button").classList.add("note-disappear");
             this.shadowRoot.getElementById("simple-note").classList.add("note-disappear");
 
             setInterval(() => {
@@ -80,7 +81,7 @@ class SimpleNote extends HTMLElement {
     }
 
     set color(newValue) {
-        const validColors = ["pink", "blue", "yellow", "green"];
+        const validColors = ["pink", "blue", "yellow", "green", "delete"];
         
         // Caso não seja especificado a cor, coloca uma aleatória
         if(!newValue || newValue == "" || !validColors.includes(newValue)){

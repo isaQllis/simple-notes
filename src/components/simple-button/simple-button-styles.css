@@ -47,6 +47,23 @@ button {
     background-color: var(--simple-color-blue);
 }
 
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+        background-color: var(--simple-color-delete);
+    }
+}
+
+.note-disappear {
+    
+    animation: fadeOut 0.3s ease-out;
+}
+
 /* Screen sizes */
 @media only screen and (min-width:663px) {
 
@@ -58,8 +75,6 @@ button {
 
     .simple-btn:hover {
         cursor: pointer;
-        background-color: var(--simple-color-white-transparent);
-        transition: background-color 0.5s ease;
     }
 }
 

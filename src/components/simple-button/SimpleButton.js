@@ -68,7 +68,7 @@ class SimpleButton extends HTMLElement {
     }
 
     set color(newValue) {
-        const validColors = ["silver", "yellow", "green", "blue", "pink"];
+        const validColors = ["silver", "yellow", "green", "blue", "pink", "delete"];
         if(!newValue || newValue === "" || !validColors.includes(newValue)){
             newValue = "silver";   
         }
