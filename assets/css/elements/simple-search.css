@@ -7,18 +7,15 @@
     font-size: large;
     font-weight: 300;
     color: white;
+    padding-left: 15px;
     
 }
 
 /* Pseudo classes and attributes stylization */
 .notes-input::placeholder {
     text-align: center;
+    padding-left: 0px;
     
-}
-.notes-input:focus {
-    padding-left: 15px;
-    outline: 0px;
-
 }
 
 .notes-input:focus::placeholder {
