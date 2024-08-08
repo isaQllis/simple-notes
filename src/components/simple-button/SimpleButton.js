@@ -1,3 +1,5 @@
+import SimpleColorizedElement from "/src/classes/SimpleColorizedElement.js";
+
 const template = document.createElement("template");
 
 template.innerHTML = `
@@ -5,18 +7,13 @@ template.innerHTML = `
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
     <!-- Animação para não aparecer os elementos antes de carregar as estilizações do css -->
-    <style>
-        section { opacity: 0; animation: fadeIn 0.8s ease-in-out forwards;}
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: scale(0.98); }
-            100% { opacity: 1; transform: scale(1); }}
-    </style>
+
 
     <button id="simple-button" class="simple-btn">
         <span id="button-icon" class="material-symbols-outlined"></span>
     </button>`;
 
-class SimpleButton extends HTMLElement {
+class SimpleButton extends SimpleColorizedElement {
     
     #icon;
     #color;
@@ -73,26 +70,16 @@ class SimpleButton extends HTMLElement {
     }
 
     set color(newValue) {
-        const validColors = ["silver", "yellow", "green", "blue", "pink"];
-        if(!newValue || newValue === "" || !validColors.includes(newValue)){
+
+        if(!newValue || newValue === "" || !this.validColors.includes(newValue)){
             newValue = "silver";   
         }
 
         this.#color = newValue;
-        this.#buildColorUnderShadow(validColors);
-    }
 
-    #buildColorUnderShadow(validColors) {
+        // Chama método da classe herdada para adicionar cor ao elemento
         const btnClasses = this.shadowRoot.getElementById("simple-button").classList;
-        
-        // Remove cor atual
-        validColors.forEach((colors) => {
-            if(btnClasses.toString().includes(colors))
-                btnClasses.remove("simple-bg-" + colors);
-        });
-
-        // Insere nova cor
-        btnClasses.add("simple-bg-" + this.color);
+        super.buildColorUnderShadow(btnClasses);
     }
     
     get icon() {
