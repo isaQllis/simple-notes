@@ -11,9 +11,10 @@ export default function turnLightMode(){
             document.getElementById("search-bar").classList.add("simple-bg-light");
 
             Array.from(document.getElementsByTagName("simple-button")).forEach( (btn) => {
-
+                
                 btn.shadowRoot.getElementById("simple-button").classList.remove("simple-bg-silver");
                 btn.shadowRoot.getElementById("simple-button").classList.add("simple-bg-light");
+                
             });
             
         } else {
@@ -24,9 +25,10 @@ export default function turnLightMode(){
             document.getElementById("search-bar").classList.add("simple-bg-graphite");
 
             Array.from(document.getElementsByTagName("simple-button")).forEach( (btn) => {
-
+               
                 btn.shadowRoot.getElementById("simple-button").classList.remove("simple-bg-light");
                 btn.shadowRoot.getElementById("simple-button").classList.add("simple-bg-silver");
+                
             });
         }
     });

@@ -53,7 +53,7 @@ class SimpleNote extends SimpleColorizedElement {
 
     connectedCallback() {
         console.log("Um componente <simple-note> foi conectado");
-        
+
         this.shadowRoot.getElementById("delete-button").addEventListener("click", () => {
             this.remove();
         });

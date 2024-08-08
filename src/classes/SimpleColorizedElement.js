@@ -9,7 +9,7 @@ class SimpleColorizedElement extends HTMLElement {
         if(new.target === SimpleColorizedElement) throw Error("A classe SimpleColorizedElement não pode ser instanciada");
         super();
 
-        this.validColors = ["pink", "blue", "yellow", "green"];
+        this.validColors = ["pink", "blue", "yellow", "green", "silver"];
 
     }
 

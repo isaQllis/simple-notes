@@ -14,17 +14,20 @@ button {
 /* Pseudo classes and attributes stylization */
 .simple-btn:hover {
     cursor: pointer;
-
+    background-color: var(--simple-color-white-transparent);
+    transition: background-color 0.5s ease;
 }
+
 
 /* Notes colors */
 .simple-bg-light {
     background-color: var(--simple-color-light);
-    transition: background-color 2s ease;
+    transition: background-color 1s ease;
 }
 
 .simple-bg-silver {
     background-color: var(--simple-color-silver);
+    transition: background-color 1s ease;
 }
 
 .simple-bg-gray {
