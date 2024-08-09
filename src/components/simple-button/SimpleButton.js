@@ -1,7 +1,7 @@
 const template = document.createElement("template");
 
 template.innerHTML = `
-    <link rel="stylesheet" href="isaqllis.github.io/simple-notes/src/components/simple-button/simple-button-styles.css">
+    <link rel="stylesheet" href="/src/components/simple-button/simple-button-styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
     <!-- Animação para não aparecer os elementos antes de carregar as estilizações do css -->
