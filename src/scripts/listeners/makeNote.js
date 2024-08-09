@@ -1,4 +1,4 @@
-import SimpleNote from "isaqllis.github.io/simple-notes/src/components/simple-note/SimpleNote.js";
+import SimpleNote from "/src/components/simple-note/SimpleNote.js";
 
 var cont = -1;
 
