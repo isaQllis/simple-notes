@@ -1,7 +1,7 @@
 const template = document.createElement("template");
 
 template.innerHTML = `
-    <link rel="stylesheet" href="/src/components/simple-note/simple-note-styles.css">
+    <link rel="stylesheet" href="isaqllis.github.io/simple-notes/src/components/simple-note/simple-note-styles.css">
 
     <!-- Animação para não aparecer os elementos antes de carregar as estilizações do css -->
     <style>
